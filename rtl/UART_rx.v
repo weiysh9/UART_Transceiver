@@ -58,7 +58,7 @@ module UART_rx  #
     
     assign  m_axis_tdata    =   m_axis_tdata_reg;
     assign  m_axis_tvalid   =   m_axis_tvalid_reg;
-    assign  m_axis_parity_error =   m_axis_error_reg;
+    assign  m_axis_error =   m_axis_error_reg;
     
     assign  busy    =   busy_reg;
     
