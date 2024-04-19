@@ -164,7 +164,7 @@ module UART_rx  #
             always @(posedge clk)
                 if(rst)
                     m_axis_error_reg <=  0;
-                else if((prescale == 0) && (bit_cnt == 1))      begin
+            else if((prescale_reg == 0) && (bit_cnt == 1))      begin
                     if(Parity == "NONE")
                         m_axis_error_reg    <=  (~rxd_reg)?  1  :   0;
                     else
