@@ -34,7 +34,7 @@ module UART_Transceiver #
     output  wire    [Databits-1:0]  m_axis_tdata,
     output  wire                    m_axis_tvalid,
     input   wire                    m_axis_tready,
-    output  wire                    m_axis_parity_error,
+    output  wire                    m_axis_error,
     
     //UART
     output  wire                    txd,
@@ -77,7 +77,7 @@ uart_rx_inst (
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tready(m_axis_tready),
-    .m_axis_parity_error(m_axis_parity_error),
+    .m_axis_error(m_axis_error),
     
     .rxd(rxd),
 
